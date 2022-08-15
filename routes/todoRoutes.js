@@ -3,7 +3,7 @@ const todoController = require('../controllers/todoController');
 
 const router = express.Router();
 
-router.post('/create', authController.signup);
-router.post('/read', authController.login);
+router.post('/create', todoController.create);
+router.post('/read', todoController.read);
 
 module.exports = router;
