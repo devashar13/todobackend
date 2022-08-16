@@ -2,7 +2,14 @@
 
 const Todo = require("../models/todo");
 
+
+  /*
+     POST
+     creating a todo item 
+     params: title, description
+  */
 exports.createTodo = async (req, res) => {
+
   try {
     const newTodo = new Todo({
       title: req.body.title,
@@ -20,6 +27,11 @@ exports.createTodo = async (req, res) => {
   }
 };
 
+
+  /*
+      GET
+      getting all todo items
+  */
 exports.todos = async (req, res) => {
   try {
     const todos = await Todo.find({}).sort({"date":-1});
