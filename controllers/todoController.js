@@ -4,7 +4,6 @@ const Todo = require("../models/todo");
 
 exports.createTodo = async (req, res) => {
   try {
-    console.log(req.body);
     const newTodo = new Todo({
       title: req.body.title,
       description: req.body.description,
